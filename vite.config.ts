@@ -6,7 +6,8 @@ import {defineConfig, loadEnv} from 'vite';
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-    base: './', // <--- MÌNH ĐÃ THÊM DÒNG NÀY VÀO ĐÂY ĐỂ FIX LỖI TRẮNG TRANG
+    base: '/for-bernhardt/',
+    // base: './',
     plugins: [react(), tailwindcss()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
